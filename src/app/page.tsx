@@ -98,7 +98,7 @@ export default function ChartasticPage() {
           <CardHeader>
             <CardTitle className="text-2xl">1. Upload Your Data</CardTitle>
             <CardDescription>
-              Upload a JSON file containing an array of objects. Each object represents a row, and keys are column headers.
+              Upload a JSON, CSV, XLS, or XLSX file. JSON files should contain an array of objects. CSV/Excel files should have a header row.
             </CardDescription>
           </CardHeader>
           <CardContent>
