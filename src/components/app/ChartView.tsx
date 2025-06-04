@@ -101,10 +101,12 @@ export function ChartView({ data, config }: ChartViewProps) {
   }
 
   if (chartType === "pie") {
-    const pieData = data.map(item => ({
-      name: item[xAxis],
-      value: parseFloat(item[yAxes[0]]), // Assuming yAxes[0] is the value for pie
-    })).filter(item => !isNaN(item.value) && item.value > 0);
+    const pieData = data
+      .map(item => ({
+        name: item[xAxis],
+        value: parseFloat(item[yAxes[0]]), // use first y-axis value for pie slices
+      }))
+      .filter(item => !isNaN(item.value));
 
     return (
       <ResponsiveContainer width="100%" height={400}>
